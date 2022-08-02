@@ -73,7 +73,7 @@ class notesdAdapter (private val context: Context, private var myList:ArrayList<
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
 
 
-
+        val userid = mAuth.currentUser?.uid
         holder.title.text=myList[position].notestxt
         holder.ini.text= myList[position].inctxt.toString()
         holder.fin.text=myList[position].dectxt.toString()
@@ -85,10 +85,17 @@ class notesdAdapter (private val context: Context, private var myList:ArrayList<
         }
         var audioid=myList[position].id
         holder.pro.max=  holder.fin.text.toString().toInt()
-        ObjectAnimator.ofInt(holder.pro,"progress",  holder.fin.text.toString().toInt()!!).setDuration(2000).start()
+        ObjectAnimator.ofInt(holder.pro,"progress",  holder.ini.text.toString().toInt()!!).setDuration(2000).start()
+
+
+
 
     }
 
+
+
+
+    // return the number of the items in the list
     override fun getItemCount(): Int {
         size=myList.size
         return myList.size
@@ -102,8 +109,6 @@ class notesdAdapter (private val context: Context, private var myList:ArrayList<
         intent.putExtra("class",ref)
         ContextCompat.startActivity(context,intent,null)
     }
-
-
 
 
 }

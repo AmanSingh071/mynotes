@@ -14,20 +14,21 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recy"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="100dp" />
+            android:layout_height="550dp"
+            android:layout_marginTop="30dp" />
 
     </LinearLayout>
 
     <ImageButton
+        android:id="@+id/addnotebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/addnotebtn"
-        android:backgroundTint="#162267"
         android:layout_marginLeft="140dp"
+        android:backgroundTint="#162267"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/ic_baseline_add_circle_outline_24"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 

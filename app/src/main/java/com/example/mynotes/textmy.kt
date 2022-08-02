@@ -20,6 +20,7 @@ class textmy : AppCompatActivity() {
     lateinit var binding: TextmBinding
      lateinit var binding2:ItemNotesBinding
      lateinit var binding3: ActivityMainBinding
+     var maxid=0
 
 
        var main:mainActivity?=null
@@ -48,14 +49,7 @@ class textmy : AppCompatActivity() {
     }
 
     private fun uploadsongtostorage() {
-        val firebaseuser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
 
-        val rootref: DatabaseReference = FirebaseDatabase.getInstance().getReference()
-
-        var likes=0
-        /*  with(templist[position]) {
-              postId = id
-          }*/
         var txtenter = binding.texentert.text.toString()
         var inienter = binding.entinc.text.toString().toInt()
         var finenter = binding.entdec.text.toString().toInt()
@@ -63,17 +57,6 @@ class textmy : AppCompatActivity() {
 
 
 
-        var currtime=System.currentTimeMillis()
-
-
-                        /*  var id: String? = "",
-                          var songname: String? = "",
-                          var duration: Long= 0,
-                          var album: String? = "",
-                          var path: String? = "",
-                          val artist:String? = "",
-                          var songurl: String="",
-                          var imageurl: String? = ""*/
 
 
                         var ref11: DatabaseReference =FirebaseDatabase.getInstance().getReference("Notes")
@@ -99,7 +82,7 @@ class textmy : AppCompatActivity() {
                         val songobj: notes= music
                         ref11.child((size).toString()).setValue(songobj).addOnCompleteListener {
                             if(it.isSuccessful()){
-                                Toast.makeText(this ,"Note Added",Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this ,"Notes Added",Toast.LENGTH_SHORT).show()
 
 
                             }
@@ -109,7 +92,7 @@ class textmy : AppCompatActivity() {
 
 
 
-                        Toast.makeText(this,"Note Added",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Notes Added",Toast.LENGTH_SHORT).show()
 
                     }
 

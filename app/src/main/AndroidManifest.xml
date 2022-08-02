@@ -20,6 +20,7 @@
             android:name=".textmy"
             android:exported="true">
 
+
         </activity>
         <activity
             android:name=".itemnotes"
