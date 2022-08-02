@@ -14,21 +14,24 @@
         android:theme="@style/Theme.MyNotes"
         tools:targetApi="31">
         <activity
+            android:name=".newac"
+            android:exported="false" />
+        <activity
             android:name=".textmy"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".itemnotes"
             android:exported="false" />
         <activity
             android:name=".mainActivity"
-            android:exported="true" >
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

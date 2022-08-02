@@ -8,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         >
         <EditText
             android:layout_width="300dp"
@@ -15,10 +16,24 @@
             android:hint="enter"
             android:id="@+id/texentert"
             />
+         <EditText
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:hint="enter inc"
+            android:id="@+id/entinc"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:hint="enter dec"
+            android:id="@+id/entdec"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="but"
+            android:backgroundTint="#192878"
+            android:layout_marginLeft="140dp"
+            android:text="Add"
             android:id="@+id/senddatabtn"
             />
 
@@ -35,8 +50,9 @@
             android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#192878"
             android:layout_marginTop="100dp"
-            android:text="but" />
+            android:text="Return" />
 
     </LinearLayout>
 
